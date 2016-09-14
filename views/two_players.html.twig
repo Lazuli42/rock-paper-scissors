@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <title>RPS</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Rock Paper Scissors</h1>
+            <div id="p1">
+                <h4>Player 1's Turn</h4>
+                <form action="/p1_select">
+                    <label class="radio-inline">
+                      <input type="radio" name="p1Selection" id="rockP1" value="rock"> Rock
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="p1Selection" id="paperP1" value="paper"> Paper
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="p1Selection" id="scissorsP1" value="scissors"> Scissors
+                    </label>
+
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </form>
+            </div>
+            <div id="p2">
+                <h4>Player 2's Turn</h4>
+                <form action="/p2_select">
+                    <label class="radio-inline">
+                      <input type="radio" name="p2Selection" id="rockP2" value="rock"> Rock
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="p2Selection" id="paperP2" value="paper"> Paper
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="p2Selection" id="scissorsP2" value="scissors"> Scissors
+                    </label>
+                    <button type="submit" class="btn btn-success">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
