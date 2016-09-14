@@ -7,41 +7,51 @@
         <title>RPS</title>
     </head>
     <body>
-        <div class="container">
+        <div class="container text-center">
             <h1>Rock Paper Scissors</h1>
+            {% if whose_turn == "player 1" %}
             <div id="p1">
                 <h4>Player 1's Turn</h4>
-                <form action="/p1_select">
+                <form action="/p1_selected">
                     <label class="radio-inline">
-                      <input type="radio" name="p1Selection" id="rockP1" value="rock"> Rock
+                      <input type="radio" name="p1Selection" id="rockP1" value="Rock" checked> Rock
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="p1Selection" id="paperP1" value="paper"> Paper
+                      <input type="radio" name="p1Selection" id="paperP1" value="Paper"> Paper
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="p1Selection" id="scissorsP1" value="scissors"> Scissors
+                      <input type="radio" name="p1Selection" id="scissorsP1" value="Scissors"> Scissors
                     </label>
 
                     <button type="submit" class="btn btn-primary">Confirm</button>
                 </form>
             </div>
+            {% endif %}
+            {% if whose_turn == "player 2" %}
             <div id="p2">
                 <h4>Player 2's Turn</h4>
-                <form action="/p2_select">
+                <form action="/p2_selected">
                     <label class="radio-inline">
-                      <input type="radio" name="p2Selection" id="rockP2" value="rock"> Rock
+                      <input type="radio" name="p2Selection" id="rockP2" value="Rock" checked> Rock
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="p2Selection" id="paperP2" value="paper"> Paper
+                      <input type="radio" name="p2Selection" id="paperP2" value="Paper"> Paper
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="p2Selection" id="scissorsP2" value="scissors"> Scissors
+                      <input type="radio" name="p2Selection" id="scissorsP2" value="Scissors"> Scissors
                     </label>
                     <button type="submit" class="btn btn-success">Confirm</button>
                 </form>
             </div>
+            {% endif %}
+            {% if whose_turn == "finished" %}
+            <h3>Player 1 chose {{rps.getPlayer1}}.
+            <h3>Player 2 chose {{rps.getPlayer2}}.
             <h2>The winner is:</h2>
             <h1>{{rps.getWinner}}</h1>
+            <a href="/two_players"><button type="submit" class="btn btn-success">Restart</button></a>
+            <a href="/"><button type="submit" class="btn btn-danger">Home</button></a>
+            {% endif %}
         </div>
     </body>
 </html>

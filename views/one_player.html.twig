@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <title>RPS</title>
+    </head>
+    <body>
+        <div class="container text-center">
+            <h1>Rock Paper Scissors</h1>
+            <div id="p1">
+                <h4>Your Turn</h4>
+                <form action="/one_player_selection">
+                    <label class="radio-inline">
+                      <input type="radio" name="p1Selection" id="rockP1" value="Rock" checked> Rock
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="p1Selection" id="paperP1" value="Paper"> Paper
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="p1Selection" id="scissorsP1" value="Scissors"> Scissors
+                    </label>
+
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </form>
+            </div>
+            {% if whose_turn == "player 2" %}
+                <h3>You chose {{rps.getPlayer1}}.
+                <h3>The computer chose {{rps.getPlayer2}}.<hr>
+                <h2>The winner is:</h2>
+                {% if rps.getWinner == "Player 2" %}
+                    <h1>The Computer</h1>
+                {% elseif rps.getWinner == "Player 1"%}
+                    <h1>YOU!!!</h1>
+                {% elseif rps.getWinner == "Draw!"%}
+                    <h1>No one wins, it's a draw.</h1>
+                {% endif %}
+                <a href="/"><button type="submit" class="btn btn-danger">Home</button></a>
+            {% endif %}
+        </div>
+    </body>
+</html>
