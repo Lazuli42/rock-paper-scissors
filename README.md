@@ -1,34 +1,34 @@
 # _Rock, Paper, Scissors!_
 
-#### _Web app that lets two users play a game of rock, paper, scissors. 09/13/2016_
+#### _Web app that lets two users play a game of rock, paper, scissors. Or one player can play against the computer. 09/13/2016_
 
 #### By _** Zach Baum Anand Angalig**_
 
 
 ## Description
 
-_Web app that lets two users play a game of rock, paper, scissors._
+_A game of rock, paper, scissors for two players playting against each other, or one player can choose to play against the computer._
 
 
 ## Setup/Installation Requirements
 
 * _If you wish to view the source code locally on your machine please follow the following steps:_
 
- ,  _1). Navigate to the directory in which you want the titleCase project to reside._
+    * _Navigate to the directory in which you want the project to reside_
 
- ,  _2). Enter the following command into your terminal:_
-        _git clone https://github.com/anandangalig/coins-combinations.git_
+    * _Enter the following command into your terminal:_
+        _git clone https://github.com/anandangalig/rock-paper-scissors.git_
 
- ,  _3). Navigate to the titleCase directory, and execute the following command in the terminal:_
+    * _Navigate to the cloned directory, and execute the following command in the terminal:_
           _composer install_
 
- ,  _4). Navigate to the web directory and start your local host by executing the following command in your terminal:_
+    * _Navigate to the web directory and start your local host by executing the following command in your terminal:_
           _php -S localhost:8000_
 
- ,  _5). Open up the browser of your choice and go to the following url:_
+    * _Open up the browser of your choice and go to the following url:_
           _http://localhost:8000/_
 
- ,  _6). If you wish to look at the source code, feel free to browse through the files in the titleCase directory_
+    * _If you wish to look at the source code, feel free to browse through the files in the directory_
 
 
 ## Specs
